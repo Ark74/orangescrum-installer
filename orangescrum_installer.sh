@@ -1,5 +1,5 @@
 #!/bin/bash
-# OrangeScrum Installer PHP 7.2 / MariaDB
+# OrangeScrum Installer PHP 7.0 / MariaDB
 # *buntu 16.04 (LTS)
 # SwITNet Ltd © - 2018, https://switnet.net/
 # GNU GPLv3 or later.
