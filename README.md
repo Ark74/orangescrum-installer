@@ -4,7 +4,7 @@ Basic installer community version based for OrangeScrum.
 
 * *buntu 16.04 (LTS)
 * Maria DB 10.3
-* PHP 7.2
+* PHP 7.0
 * npm 8.0
 * Sendgrid configuration (pseudo)assistant.
 
