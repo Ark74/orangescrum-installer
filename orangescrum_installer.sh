@@ -189,10 +189,10 @@ set_sengrid() {
 remove_google_group() {
 		if [ $rgg = yes ]; then
 			echo "# Customize - Remove Google Group"
-			sed -i "s|Orangescrum's Google Group</a>.|Orangescrum's Google Group</a>. -->|" /var/www/html/orangescrum/app/View/Users/login.ctp
-			sed -i 's|<a href="https://groups.google.com|<!-- <a href="https://groups.google.com|' /var/www/html/orangescrum/app/View/Elements/footer_inner.ctp
-			sed -i 's|<a href="https://groups.google.com|<!-- <a href="https://groups.google.com|' /var/www/html/orangescrum/app/View/Users/login.ctp
-			sed -i "s|Orangescrum's Google Group</a>.|Orangescrum's Google Group</a>. -->|" /var/www/html/orangescrum/app/View/Elements/footer_inner.ctp
+			sed -i "s|Orangescrum's Google Group</a>.|Orangescrum's Google Group</a>. -->|" $APPROOT/app/View/Users/login.ctp
+			sed -i 's|<a href="https://groups.google.com|<!-- <a href="https://groups.google.com|' $APPROOT/app/View/Elements/footer_inner.ctp
+			sed -i 's|<a href="https://groups.google.com|<!-- <a href="https://groups.google.com|' $APPROOT/app/View/Users/login.ctp
+			sed -i "s|Orangescrum's Google Group</a>.|Orangescrum's Google Group</a>. -->|" $APPROOT/app/View/Elements/footer_inner.ctp
 		else 
 			echo "Google Groups footer remains"
 		fi
@@ -305,7 +305,7 @@ set_sengrid
 remove_google_group
 ## L O C A L  F I X E S ##
 # Note on hardcoded permission avise
-sed -i "s|<li>You have write permission (777) to <b>\`app/tmp\`</b> folders</li>|<li>\'You have write permission (777) to <b>\`app/tmp\`</b> folders\' \(<em>This is actually hardcoded, <b>please ignore<b></em>\)</li>|" /var/www/html/orangescrum/app/View/Users/login.ctp
+sed -i "s|<li>You have write permission (777) to <b>\`app/tmp\`</b> folders</li>|<li>\'You have write permission (777) to <b>\`app/tmp\`</b> folders\' \(<em>This is actually hardcoded, <b>please ignore<b></em>\)</li>|" $APPROOT/app/View/Users/login.ctp
 # Fix issue #126
 sed -i 's|include("install.php");|//include("install.php");|' $APPROOT/app/Config/core.php
 
